@@ -53,7 +53,7 @@ pub struct RpcProvider {
 impl RpcProvider {
     pub fn new(endpoint: &str) -> Self {
         let client = Client::builder()
-            .timeout(Duration::from_secs(5))
+            .timeout(Duration::from_secs(15))
             .build()
             .expect("reqwest client builder is infallible with valid config");
         Self {
